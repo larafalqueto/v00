@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-toolbar color="light">
+
+        <ion-buttons>
+            <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu">
+
+                </ion-icon>
+            </ion-button>
+
+            <ion-title>
+                MOBU
+            </ion-title>
+        </ion-buttons>
+
+    </ion-toolbar>
+
+    <app-map-modal></app-map-modal>
+</ion-header>
+
+
+
+
+<ion-content>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="Linhas" routerLink="/linhas">
+                <ion-icon name="swap"></ion-icon>
+                <ion-label>Linhas</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Direções" routerLink="/home">
+                <ion-icon name="navigate" style="color:blue"></ion-icon>
+
+                <ion-label style="color:blue">Direções</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Status" routerLink="/status">
+                <ion-icon name="bus"></ion-icon>
+                <ion-label>Status</ion-label>
+            </ion-tab-button>
+
+        </ion-tab-bar>
+    </ion-tabs>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="ion-padding"></div>
+    <ion-item>
+        <ion-label position="floating">Para onde?</ion-label>
+        <ion-input></ion-input>
+    </ion-item> -->
+
+
+<!--    <div class="ion-padding">
+        The world is your oyster.
+        <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    </div> -->

@@ -1,0 +1,41 @@
+a {
+    background-color: transparent;
+    color: #ff3838;
+}
+
+ion-header {
+    background-color: white;
+    padding: 60px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: white;
+    padding: 70px;
+    text-align: center;
+}
+
+nav {
+    background-color: blue;
+    width: 25%;
+    padding: 30px;
+    float: right;
+}
+
+footer {
+    background-color: white;
+    width: 25%;
+    text-align: center;
+    color: white;
+    float: right;
+}
+
+section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}

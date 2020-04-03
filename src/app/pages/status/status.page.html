@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar color="light">
+
+        <ion-buttons>
+            <ion-button (click)="toggleMenu()">
+                <ion-icon slot="icon-only" name="menu">
+
+                </ion-icon>
+            </ion-button>
+
+            <ion-title>
+                MOBU
+            </ion-title>
+
+
+
+            <!--  <ion-input placeholder="Para Onde?"></ion-input> -->
+        </ion-buttons>
+
+    </ion-toolbar>
+
+    <app-map-modal></app-map-modal>
+</ion-header>
+
+<ion-content>
+
+
+
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="Linhas" routerLink="/linhas">
+                <ion-icon name="swap"></ion-icon>
+                <ion-label>Linhas</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Direções" routerLink="/home">
+                <ion-icon name="navigate"></ion-icon>
+                <ion-label>Direções</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button tab="Status">
+                <ion-icon name="bus" style="color:blue"></ion-icon>
+                <ion-label style="color:blue">Status</ion-label>
+            </ion-tab-button>
+
+        </ion-tab-bar>
+    </ion-tabs>
+
+
+</ion-content>

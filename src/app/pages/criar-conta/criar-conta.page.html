@@ -1,0 +1,60 @@
+<!-- <ion-header>
+
+    <ion-button routerLink="/home" color="default">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+    </ion-button>
+</ion-header>
+ -->
+
+<ion-header>
+
+
+    <ion-buttons>
+        <ion-button routerLink="/home" color="default">
+            <ion-icon slot="icon-only" name="exit">
+
+            </ion-icon>
+        </ion-button>
+    </ion-buttons>
+
+</ion-header>
+
+<ion-content padding center text-center>
+
+
+
+    <div class="ion-padding"></div>
+
+    <ion-item lines="none" class="ion-padding-top">
+        <h2 class="ion-padding-top"><strong>M O B <a >U</a></strong></h2>
+
+
+        <ion-img src="./assets/iconeBus.png"></ion-img>
+
+
+    </ion-item>
+
+
+
+    <p class="ion-text-center" lines="none">Crie sua conta:</p>
+    <div class="ion-padding"></div>
+
+    <ion-list>
+        <ion-item>
+            <ion-input placeholder="E-mail" type="email" #email></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input placeholder="Nome Completo" type="text" #nomeCriar></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input placeholder="Senha" type="password" #senhaCriar></ion-input>
+        </ion-item>
+        <!-- name="title" [(ngModel)]="title" -->
+
+    </ion-list>
+
+    <div class="ion-padding"></div>
+
+    <ion-button expand="block" type="submit" (click)="presentAlert()" (click)="cadastrar(email.value, nomeCriar.value, senhaCriar.value)" routerLink="/home">Cadastrar</ion-button>
