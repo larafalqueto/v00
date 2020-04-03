@@ -3,6 +3,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { UsuarioService } from '../../providers/usuario.service';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -41,11 +42,16 @@ export class CriarContaPage implements OnInit {
     this._usuarioProv.verificaUsuario(senha).then();
     } */
 
+     onSubmit(form: NgForm) {
+     console.log(form);
+    }
 
-    cadastrar(email: string, nomeCriar: string, senhaCriar: string) {
-      console.log('nome:' + nomeCriar + ' senha:' + senhaCriar);
+
+    cadastrar(emailCtrl: string, nomeCriar: string, senhaCriar: string ) {
+      console.log('email: ' + emailCtrl + ' nome: ' + nomeCriar + ' senha: ' + senhaCriar);
     }
   }
+
 
 
 

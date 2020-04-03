@@ -19,7 +19,9 @@
 
 </ion-header>
 
-<ion-content padding center text-center>
+<!-- padding center text-center -->
+
+<ion-content>
 
 
 
@@ -38,23 +40,47 @@
 
     <p class="ion-text-center" lines="none">Crie sua conta:</p>
     <div class="ion-padding"></div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" ngModel name="email" required email #emailCtrl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
+                <ion-label>
+                    Deve ser um e-mail válido.
+                </ion-label>
+            </ion-item>
 
-    <ion-list>
-        <ion-item>
-            <ion-input placeholder="E-mail" type="email" #email></ion-input>
-        </ion-item>
 
-        <ion-item>
-            <ion-input placeholder="Nome Completo" type="text" #nomeCriar></ion-input>
-        </ion-item>
 
-        <ion-item>
-            <ion-input placeholder="Senha" type="password" #senhaCriar></ion-input>
-        </ion-item>
-        <!-- name="title" [(ngModel)]="title" -->
 
-    </ion-list>
+            <ion-item>
+                <ion-input placeholder="Nome Completo" type="text" ngModel name="nome" required #nomeCtrl="ngModel" #nomeCriar></ion-input>
+            </ion-item>
 
-    <div class="ion-padding"></div>
 
-    <ion-button expand="block" type="submit" (click)="presentAlert()" (click)="cadastrar(email.value, nomeCriar.value, senhaCriar.value)" routerLink="/home">Cadastrar</ion-button>
+
+
+            <ion-item>
+                <ion-input placeholder="Senha" type="password" ngModel name="password" #passwordCtrl="ngModel" required minlength="6" #senhaCriar></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!passwordCtrl.valid && passwordCtrl.touched" lines="none">
+                <ion-label>
+                    Deve conter ao menos 6 dígitos.
+                </ion-label>
+            </ion-item>
+
+
+
+        </ion-list>
+
+        <div class="ion-padding"></div>
+
+        <ion-button expand="block" type="submit" (click)="presentAlert()" (click)="cadastrar(emailCtrl.value, nomeCriar.value, senhaCriar.value)" [disabled]="!f.valid" routerLink="/home">Cadastrar</ion-button>
+
+    </form>
+
+    <!--  (click)="presentAlert()" -->
+
+    <!--  (click)="cadastrar(email.value, nomeCriar.value, senhaCriar.value)" -->
